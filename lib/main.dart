@@ -18,7 +18,7 @@ class TerritoriosDoBrasil extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Territorios Do Brasil',
+      title: 'Raízes',
       theme: ThemeData(
         primaryColor: AppColors.primaryColor,
         accentColor: AppColors.secoundaryColor,

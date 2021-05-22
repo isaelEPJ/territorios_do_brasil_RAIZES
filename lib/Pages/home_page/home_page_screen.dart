@@ -1,8 +1,8 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:fl_territorios_do_brasil/Pages/home_page/home_page.controller.dart';
 import 'package:fl_territorios_do_brasil/Pages/index/index_screen.dart';
-import 'package:fl_territorios_do_brasil/Pages/places/places_page.dart';
-import 'package:fl_territorios_do_brasil/Pages/products/products_page.dart';
+import 'package:fl_territorios_do_brasil/Pages/places/places_list.dart';
+import 'package:fl_territorios_do_brasil/Pages/products/products_list.dart';
 import 'package:fl_territorios_do_brasil/Pages/profile/profile_screen.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:flutter/material.dart';

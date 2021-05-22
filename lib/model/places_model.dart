@@ -1,3 +1,5 @@
+import 'package:fl_territorios_do_brasil/model/company_model.dart';
+
 class Location {
   final String estado;
   final String regiao;
@@ -21,13 +23,15 @@ class PlacesModel {
   final int id;
   final String name;
   final String description;
-  final String imageUrl;
+  final List<String> imageUrl;
   final Location localidade;
+  final List<CompanyModel> companyList;
   const PlacesModel({
     required this.id,
     required this.name,
     required this.description,
     required this.imageUrl,
     required this.localidade,
+    required this.companyList,
   });
 }

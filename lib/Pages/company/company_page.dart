@@ -2,12 +2,12 @@ import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class Placespage extends StatefulWidget {
+class Companyspage extends StatefulWidget {
   @override
-  _PlacespageState createState() => _PlacespageState();
+  _CompanyspageState createState() => _CompanyspageState();
 }
 
-class _PlacespageState extends State<Placespage> {
+class _CompanyspageState extends State<Companyspage> {
   bool isSearch = false;
 
   @override

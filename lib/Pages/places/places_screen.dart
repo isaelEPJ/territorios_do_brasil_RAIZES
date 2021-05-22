@@ -1,3 +1,7 @@
+import 'package:fl_territorios_do_brasil/Pages/components/carousel_network.dart';
+import 'package:fl_territorios_do_brasil/Pages/places/place_component.dart';
+import 'package:fl_territorios_do_brasil/data/company_data.dart';
+import 'package:fl_territorios_do_brasil/model/company_model.dart';
 import 'package:fl_territorios_do_brasil/model/places_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
@@ -34,6 +38,23 @@ class PlacesScreen extends StatelessWidget {
             ),
             onPressed: () {},
           ),
+        ],
+      ),
+      body: Column(
+        children: [
+          CarouselComponent(images: place.imageUrl),
+          Container(
+            width: double.maxFinite,
+            height: MediaQuery.of(context).size.height * 0.58,
+            // margin: EdgeInsets.symmetric(horizontal: 20),
+            child: ListView.builder(
+              itemCount: place.companyList.length,
+              itemBuilder: (BuildContext context, int index) {
+                final CompanyModel company = CompanyData[index];
+                return PlaceComponent(company: company);
+              },
+            ),
+          )
         ],
       ),
     );

@@ -5,7 +5,7 @@ class ProductsModel {
   final double price;
   final String history;
   final bool disponible;
-  final String imageUrl;
+  final List<String> imageUrl;
   const ProductsModel({
     required this.id,
     required this.name,
