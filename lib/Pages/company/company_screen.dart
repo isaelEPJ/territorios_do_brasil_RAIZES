@@ -1,22 +1,22 @@
+import 'package:fl_territorios_do_brasil/Pages/company/company_component.dart';
 import 'package:fl_territorios_do_brasil/Pages/components/carousel_network.dart';
-import 'package:fl_territorios_do_brasil/Pages/places/places_screen.dart';
-import 'package:fl_territorios_do_brasil/model/products_model.dart';
+import 'package:fl_territorios_do_brasil/model/company_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProductsScreen extends StatelessWidget {
-  final ProductsModel product;
-  ProductsScreen({required this.product});
+class CompanyScreen extends StatelessWidget {
+  final CompanyModel company;
+  CompanyScreen({required this.company});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          product.name,
+          company.name,
           style: AppTextStyles.appBartitle,
         ),
         iconTheme: IconThemeData(color: AppColors.light, size: 25),
@@ -33,14 +33,14 @@ class ProductsScreen extends StatelessWidget {
         ],
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        margin: EdgeInsets.symmetric(horizontal: 15, vertical: 30),
         child: Card(
           elevation: 10,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CarouselComponent(images: product.imageUrl),
+              CarouselComponent(images: company.imageUrl),
               Column(
                 children: [
                   Container(
@@ -51,7 +51,7 @@ class ProductsScreen extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            // SizedBox(height: 10),
+                            SizedBox(height: 20),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -59,14 +59,14 @@ class ProductsScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      product.name,
+                                      company.name,
                                       style: GoogleFonts.roboto(
                                           color: AppColors.dark,
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
-                                      ' Atividades',
+                                      '${company.products.length} Atividades',
                                       style: GoogleFonts.roboto(
                                           color: AppColors.dark,
                                           fontSize: 16,
@@ -117,7 +117,7 @@ class ProductsScreen extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               width: MediaQuery.of(context).size.width * 0.8,
                               child: Text(
-                                product.description,
+                                company.description,
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 10,
                                 style: AppTextStyles.subTitle,
@@ -133,7 +133,31 @@ class ProductsScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryColor,
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        width: 1,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                    child: TextButton(
+                      child: Text(
+                        'Visitar',
+                        style: GoogleFonts.roboto(
+                            color: AppColors.light,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      onPressed: () {
+                        // abrir pagina da empresa
+                        Get.to(CompanyScreen(company: company));
+                      },
+                    ),
+                  ),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
@@ -149,8 +173,8 @@ class ProductsScreen extends StatelessWidget {
                         style: AppTextStyles.textButtonPrimary,
                       ),
                       onPressed: () {
-                        // ver place where esse produto existir e ir p/ ele
-                        // Get.to(PlacesScreen(place: ));
+                        // abrir pagina da empresa
+                        Get.to(CompanyScreen(company: company));
                       },
                     ),
                   ),

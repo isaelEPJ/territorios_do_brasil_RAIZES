@@ -35,7 +35,7 @@ class IndexPlace extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(place.imageUrl),
+                    image: NetworkImage(place.imageUrl[0]),
                   ),
                 ),
               ),

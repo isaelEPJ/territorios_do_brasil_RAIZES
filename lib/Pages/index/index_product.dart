@@ -34,7 +34,7 @@ class IndexProduct extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(product.imageUrl),
+                    image: NetworkImage(product.imageUrl[0]),
                   ),
                 ),
               ),

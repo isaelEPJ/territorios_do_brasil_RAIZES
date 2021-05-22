@@ -1,5 +1,5 @@
 import 'package:fl_territorios_do_brasil/Pages/index/appbar/home_appbar_index.dart';
-import 'package:fl_territorios_do_brasil/Pages/index/appbar/carousel_component.dart';
+import 'package:fl_territorios_do_brasil/Pages/components/carousel_network.dart';
 import 'package:fl_territorios_do_brasil/Pages/index/index_place.dart';
 import 'package:fl_territorios_do_brasil/Pages/index/index_product.dart';
 import 'package:fl_territorios_do_brasil/data/places_data.dart';
