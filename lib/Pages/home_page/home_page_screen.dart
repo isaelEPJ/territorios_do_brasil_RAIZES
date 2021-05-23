@@ -3,10 +3,12 @@ import 'package:fl_territorios_do_brasil/Pages/home_page/home_page.controller.da
 import 'package:fl_territorios_do_brasil/Pages/index/index_screen.dart';
 import 'package:fl_territorios_do_brasil/Pages/places/places_list.dart';
 import 'package:fl_territorios_do_brasil/Pages/products/products_list.dart';
+import 'package:fl_territorios_do_brasil/Pages/profile/edit_account.dart';
 import 'package:fl_territorios_do_brasil/Pages/profile/profile_screen.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   final HomePageController controller;
@@ -39,53 +41,41 @@ class _HomePageState extends State<HomePage> {
         controller: widget.controller.pageViewController,
         children: <Widget>[
           IndexScreen(),
-          Placespage(),
           ProductsPage(),
-          ProfileScreen(),
+          Placespage(),
+          EditAccount(),
         ],
       ),
       bottomNavigationBar: AnimatedBuilder(
           animation: widget.controller.pageViewController,
           builder: (context, snapshot) {
-            return BottomNavyBar(
-              selectedIndex:
+            return BottomNavigationBar(
+              currentIndex:
                   widget.controller.pageViewController.page?.round() ?? 0,
-              showElevation: true,
-              itemCornerRadius: 24,
-              curve: Curves.easeIn,
-              onItemSelected: (index) {
-                // setState(() => _currentIndex = index);
+              onTap: (index) {
                 widget.controller.pageViewController.jumpToPage(index);
               },
-              items: <BottomNavyBarItem>[
-                BottomNavyBarItem(
-                  icon: Icon(Icons.home),
-                  title: Text('Inicio'),
-                  textAlign: TextAlign.center,
-                  activeColor: Theme.of(context).accentColor,
-                  inactiveColor: AppColors.lightsecoundaryColor,
-                ),
-                BottomNavyBarItem(
-                  icon: Icon(Icons.map),
-                  title: Text('Categorias'),
-                  textAlign: TextAlign.center,
-                  activeColor: Theme.of(context).accentColor,
-                  inactiveColor: AppColors.lightsecoundaryColor,
-                ),
-                BottomNavyBarItem(
-                  icon: Icon(Icons.widgets),
-                  title: Text('Mensagens'),
-                  textAlign: TextAlign.center,
-                  activeColor: Theme.of(context).accentColor,
-                  inactiveColor: AppColors.lightsecoundaryColor,
-                ),
-                BottomNavyBarItem(
-                  icon: Icon(Icons.person),
-                  title: Text('Perfil'),
-                  textAlign: TextAlign.center,
-                  activeColor: Theme.of(context).accentColor,
-                  inactiveColor: AppColors.lightsecoundaryColor,
-                ),
+              iconSize: 22,
+              selectedItemColor: AppColors.primaryColor,
+              unselectedItemColor: AppColors.grey,
+              selectedLabelStyle: GoogleFonts.roboto(
+                  color: AppColors.primaryColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.normal),
+              unselectedLabelStyle: GoogleFonts.roboto(
+                  color: AppColors.grey,
+                  fontSize: 14,
+                  fontWeight: FontWeight.normal),
+              showUnselectedLabels: true,
+              items: [
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.home_outlined), label: 'Home'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.explore_rounded), label: 'Produtos'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.map_outlined), label: 'Locais'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.person_outline), label: 'Perfil'),
               ],
             );
           }),

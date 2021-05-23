@@ -5,6 +5,7 @@ import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Placespage extends StatefulWidget {
   @override
@@ -65,10 +66,44 @@ class _PlacespageState extends State<Placespage> {
         child: Column(
           children: [
             Container(
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: Container(
-                  color: AppColors.dark,
-                )),
+              height: MediaQuery.of(context).size.height * 0.25,
+              width: double.maxFinite,
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://images.unsplash.com/photo-1574238778303-05c44452ecd5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YW1hem9uaWF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
+                ),
+              ),
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: AppColors.light.withOpacity(0.5),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Lugares.',
+                      style: GoogleFonts.roboto(
+                          color: AppColors.dark,
+                          fontSize: 27,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Text(
+                      'Conecte-se á lugares, pessoas, culturas...',
+                      style: GoogleFonts.roboto(
+                          color: AppColors.dark,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Container(
               height: MediaQuery.of(context).size.height * 0.5,
               child: ListView.builder(
@@ -91,8 +126,8 @@ class _PlacespageState extends State<Placespage> {
                           ));
                         },
                         leading: Container(
-                          width: 50,
-                          height: 50,
+                          width: 60,
+                          height: 60,
                           padding: EdgeInsets.all(3),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
@@ -102,9 +137,24 @@ class _PlacespageState extends State<Placespage> {
                             ),
                           ),
                         ),
-                        title: Container(
-                            margin: EdgeInsets.only(left: 6),
-                            child: Text(place.name)),
+                        title: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.03,
+                            ),
+                            Container(
+                                margin: EdgeInsets.only(left: 6),
+                                child: Text(
+                                  place.name,
+                                  style: AppTextStyles.subTitle,
+                                )),
+                            SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.035,
+                            ),
+                          ],
+                        ),
                         trailing: Container(
                           width: 65,
                           child: Row(

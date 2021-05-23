@@ -1,17 +1,14 @@
-import 'package:fl_territorios_do_brasil/Pages/products/product_component.dart';
-import 'package:fl_territorios_do_brasil/data/products_data.dart';
-import 'package:fl_territorios_do_brasil/model/products_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProductsPage extends StatefulWidget {
+class CompanyList extends StatefulWidget {
   @override
-  _ProductsPageState createState() => _ProductsPageState();
+  _CompanyListState createState() => _CompanyListState();
 }
 
-class _ProductsPageState extends State<ProductsPage> {
+class _CompanyListState extends State<CompanyList> {
   bool isSearch = false;
 
   @override
@@ -33,7 +30,7 @@ class _ProductsPageState extends State<ProductsPage> {
                 ),
               )
             : Text(
-                'Produtos',
+                'Fornecedores',
                 style: AppTextStyles.appBartitle,
               ),
         iconTheme: IconThemeData(color: AppColors.light, size: 25),
@@ -69,11 +66,12 @@ class _ProductsPageState extends State<ProductsPage> {
               width: double.maxFinite,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                      'https://images.unsplash.com/photo-1517383898750-55acaa953838?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGl0YXlhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
-                ),
+                color: AppColors.dark.withOpacity(0.5),
+                // image: DecorationImage(
+                //   fit: BoxFit.cover,
+                //   image: NetworkImage(
+                //       'https://images.unsplash.com/photo-1517383898750-55acaa953838?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGl0YXlhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
+                // ),
               ),
               child: Container(
                 padding: EdgeInsets.all(10),
@@ -86,14 +84,14 @@ class _ProductsPageState extends State<ProductsPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Produtos.',
+                      'Localizaçao.',
                       style: GoogleFonts.roboto(
                           color: AppColors.dark,
                           fontSize: 27,
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      'Produtos de diferentes regioes e gostos prontos para conquistar voce...',
+                      'Barra-dos-Coqueiros - Sergipe',
                       style: GoogleFonts.roboto(
                           color: AppColors.dark,
                           fontSize: 16,
@@ -103,18 +101,18 @@ class _ProductsPageState extends State<ProductsPage> {
                 ),
               ),
             ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.56,
-              child: ListView.builder(
-                itemCount: ProductsData.length,
-                itemBuilder: (BuildContext context, int index) {
-                  final ProductsModel product = ProductsData[index];
-                  return ProductComponent(
-                    product: product,
-                  );
-                },
-              ),
-            ),
+            // Container(
+            //   height: MediaQuery.of(context).size.height * 0.56,
+            //   child: ListView.builder(
+            //     itemCount: ProductsData.length,
+            //     itemBuilder: (BuildContext context, int index) {
+            //       final ProductsModel product = ProductsData[index];
+            //       return ProductComponent(
+            //         product: product,
+            //       );
+            //     },
+            //   ),
+            // ),
           ],
         ),
       ),

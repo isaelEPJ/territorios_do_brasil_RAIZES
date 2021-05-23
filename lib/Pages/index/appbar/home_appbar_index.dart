@@ -1,14 +1,18 @@
 import 'package:fl_territorios_do_brasil/Pages/index/appbar/sub_appbar_index.dart';
+import 'package:fl_territorios_do_brasil/Pages/profile/profile_screen.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_images.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeAppBar extends PreferredSize {
   final BuildContext context;
+  final Function() onClick;
   final String title;
-  HomeAppBar({required this.context, required this.title})
+  HomeAppBar(
+      {required this.context, required this.title, required this.onClick})
       : super(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.33),
@@ -48,41 +52,50 @@ class HomeAppBar extends PreferredSize {
                             ),
                           ),
                           SizedBox(width: 10),
-                          Container(
-                            padding: EdgeInsets.all(6),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: AppColors.lightBackGround.withOpacity(0.9),
-                            ),
-                            child: Text.rich(
-                              TextSpan(
-                                  text: 'Bem vindo, ',
-                                  style: AppTextStyles.subTitle,
-                                  children: [
-                                    TextSpan(
-                                        text: title,
-                                        style: AppTextStyles.title),
-                                  ]),
+                          InkWell(
+                            onTap: () {
+                              Get.to(ProfileScreen());
+                            },
+                            child: Container(
+                              padding: EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color:
+                                    AppColors.lightBackGround.withOpacity(0.9),
+                              ),
+                              child: Text.rich(
+                                TextSpan(
+                                    text: 'Bem vindo, ',
+                                    style: AppTextStyles.subTitle,
+                                    children: [
+                                      TextSpan(
+                                          text: title,
+                                          style: AppTextStyles.title),
+                                    ]),
+                              ),
                             ),
                           ),
                         ],
                       ),
-                      Card(
-                        elevation: 6,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6)),
-                        child: Container(
-                          width: 36,
-                          height: 33,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              image: DecorationImage(
-                                fit: BoxFit.contain,
-                                image: AssetImage(
-                                  AppImages.notificationImage,
-                                ),
-                              )),
+                      InkWell(
+                        onTap: onClick,
+                        child: Card(
+                          elevation: 6,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6)),
+                          child: Container(
+                            width: 36,
+                            height: 33,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                image: DecorationImage(
+                                  fit: BoxFit.contain,
+                                  image: AssetImage(
+                                    AppImages.notificationImage,
+                                  ),
+                                )),
+                          ),
                         ),
                       ),
                     ],

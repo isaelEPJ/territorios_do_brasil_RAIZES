@@ -13,8 +13,49 @@ class ProductComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Get.to(ProductsScreen(product: product));
+      onLongPress: () {
+        Get.defaultDialog(
+            title: 'Opçoes',
+            content: Column(
+              children: [
+                TextButton.icon(
+                  style: TextButton.styleFrom(
+                    primary: AppColors.primaryColor,
+                  ),
+                  onPressed: () {
+                    Get.to(ProductsScreen(product: product));
+                  },
+                  icon: Icon(
+                    Icons.widgets_outlined,
+                    size: 25,
+                  ),
+                  label: Text(
+                    'Ir para produto',
+                    style: TextStyle(fontSize: 13),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                  ),
+                ),
+                TextButton.icon(
+                  style: TextButton.styleFrom(
+                    primary: AppColors.primaryColor,
+                  ),
+                  onPressed: () {
+                    Get.to(ProductsScreen(product: product));
+                  },
+                  icon: Icon(
+                    Icons.person,
+                    size: 25,
+                  ),
+                  label: Text(
+                    'Ver Vendedor',
+                    style: TextStyle(fontSize: 13),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                  ),
+                ),
+              ],
+            ));
       },
       child: Container(
         // width: MediaQuery.of(context).size.width * 0.9,
@@ -81,9 +122,11 @@ class ProductComponent extends StatelessWidget {
                     child: TextButton(
                       child: Text(
                         'Saiba mais',
-                        style: AppTextStyles.title,
+                        style: AppTextStyles.textButtonPrimary,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(ProductsScreen(product: product));
+                      },
                     ),
                   ),
                 ],
@@ -92,8 +135,8 @@ class ProductComponent extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.41,
-                    height: MediaQuery.of(context).size.height * 0.23,
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    height: MediaQuery.of(context).size.height * 0.24,
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),

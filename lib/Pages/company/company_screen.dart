@@ -1,4 +1,3 @@
-import 'package:fl_territorios_do_brasil/Pages/company/company_component.dart';
 import 'package:fl_territorios_do_brasil/Pages/components/carousel_network.dart';
 import 'package:fl_territorios_do_brasil/model/company_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';

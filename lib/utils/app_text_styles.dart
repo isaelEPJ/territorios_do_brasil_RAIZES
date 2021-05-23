@@ -33,4 +33,7 @@ class AppTextStyles {
 
   static final TextStyle textButtonPrimary = GoogleFonts.roboto(
       color: AppColors.primaryColor, fontSize: 16, fontWeight: FontWeight.w500);
+
+  static final TextStyle textButtonLight = GoogleFonts.roboto(
+      color: AppColors.light, fontSize: 16, fontWeight: FontWeight.w500);
 }
