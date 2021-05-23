@@ -1,9 +1,15 @@
+import 'package:fl_territorios_do_brasil/Pages/company/company_component.dart';
+import 'package:fl_territorios_do_brasil/data/company_data.dart';
+import 'package:fl_territorios_do_brasil/model/company_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CompanyList extends StatefulWidget {
+  final CompanyModel company;
+  CompanyList({required this.company});
+
   @override
   _CompanyListState createState() => _CompanyListState();
 }
@@ -91,7 +97,7 @@ class _CompanyListState extends State<CompanyList> {
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      'Barra-dos-Coqueiros - Sergipe',
+                      '${widget.company.local.estado} - ${widget.company.local.regiao}',
                       style: GoogleFonts.roboto(
                           color: AppColors.dark,
                           fontSize: 16,
@@ -101,18 +107,18 @@ class _CompanyListState extends State<CompanyList> {
                 ),
               ),
             ),
-            // Container(
-            //   height: MediaQuery.of(context).size.height * 0.56,
-            //   child: ListView.builder(
-            //     itemCount: ProductsData.length,
-            //     itemBuilder: (BuildContext context, int index) {
-            //       final ProductsModel product = ProductsData[index];
-            //       return ProductComponent(
-            //         product: product,
-            //       );
-            //     },
-            //   ),
-            // ),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.56,
+              child: ListView.builder(
+                itemCount: CompanyData.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final CompanyModel company = CompanyData[index];
+                  return CompanyComponent(
+                    company: company,
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),

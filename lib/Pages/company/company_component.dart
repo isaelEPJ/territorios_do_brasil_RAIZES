@@ -1,3 +1,4 @@
+import 'package:fl_territorios_do_brasil/Pages/company/company_screen.dart';
 import 'package:fl_territorios_do_brasil/model/company_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
@@ -59,7 +60,7 @@ class CompanyComponent extends StatelessWidget {
       child: Container(
         // width: MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.height * 0.3,
-        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(6)),
         child: Card(
           elevation: 10,
@@ -85,6 +86,8 @@ class CompanyComponent extends StatelessWidget {
                       children: [
                         Text(
                           company.name,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
                           style: GoogleFonts.roboto(
                               color: AppColors.dark,
                               fontSize: 22,
@@ -109,7 +112,7 @@ class CompanyComponent extends StatelessWidget {
                   Container(
                     // width: MediaQuery.of(context).size.width * 0.45,
                     // height: MediaQuery.of(context).size.height * 0.1,
-                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     padding: EdgeInsets.symmetric(horizontal: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
@@ -124,7 +127,7 @@ class CompanyComponent extends StatelessWidget {
                         style: AppTextStyles.textButtonPrimary,
                       ),
                       onPressed: () {
-                        // Get.to(ProductsScreen(product: product));
+                        Get.to(CompanyScreen(company: company));
                       },
                     ),
                   ),

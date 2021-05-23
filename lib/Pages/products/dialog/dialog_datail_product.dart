@@ -15,12 +15,9 @@ class DialogDetailProduct extends StatelessWidget {
           Text('Descriçao',
               overflow: TextOverflow.clip,
               style: AppTextStyles.textButtonPrimary),
-          Text(
-              'O fruto pequeno tem um formato similar ao da pêra, polpa branca, cremosa e suculenta, ligeiramente ácida e leitosa, rica em vitamina C. Possui teor de proteína que varia entre 1,3 e 3%. Sua polpa pode ser consumida madura in natura e é matéria-prima para produção de deliciosos produtos como: geleias, bolos, biscoitos, compotas, sorvetes, licores, vinho, entre outros.',
-              style: AppTextStyles.subtitleTile),
+          Text(product.description, style: AppTextStyles.subtitleTile),
           Text('História', style: AppTextStyles.textButtonPrimary),
-          Text('fskpenrprep nqpiwfnkewnvpwpnvipwnv mmqpkfm eqmpwes.',
-              style: AppTextStyles.subtitleTile),
+          Text(product.history, style: AppTextStyles.subtitleTile),
         ],
       ),
     );

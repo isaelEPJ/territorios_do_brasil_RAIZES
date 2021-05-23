@@ -20,7 +20,7 @@ class IndexProduct extends StatelessWidget {
         elevation: 10,
         child: Container(
           width: MediaQuery.of(context).size.width * 0.45,
-          height: MediaQuery.of(context).size.height * 0.35,
+          height: MediaQuery.of(context).size.height * 0.37,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
             // color: Color(0xFFC4C4C4),
@@ -29,7 +29,7 @@ class IndexProduct extends StatelessWidget {
             children: [
               Container(
                 width: double.maxFinite,
-                height: MediaQuery.of(context).size.height * 0.24,
+                height: MediaQuery.of(context).size.height * 0.23,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   image: DecorationImage(
@@ -41,17 +41,21 @@ class IndexProduct extends StatelessWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 width: double.maxFinite,
-                height: MediaQuery.of(context).size.height * 0.09,
+                height: MediaQuery.of(context).size.height * 0.1,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       product.name,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                       style: AppTextStyles.titleCard,
                     ),
                     Text(
-                      'R\$ ${product.price.toStringAsFixed(2).replaceAll('.', ',')}',
+                      product.description,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
                       style: AppTextStyles.bodyGrey,
                     ),
                   ],

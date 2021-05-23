@@ -1,7 +1,7 @@
 import 'package:fl_territorios_do_brasil/Pages/company/company_list.dart';
 import 'package:fl_territorios_do_brasil/Pages/components/carousel_network.dart';
-import 'package:fl_territorios_do_brasil/Pages/places/places_screen.dart';
 import 'package:fl_territorios_do_brasil/Pages/products/dialog/dialog_datail_product.dart';
+import 'package:fl_territorios_do_brasil/data/company_data.dart';
 import 'package:fl_territorios_do_brasil/model/products_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_colors.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
@@ -204,7 +204,7 @@ class ProductsScreen extends StatelessWidget {
                                           },
                                         )
                                       ],
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -220,22 +220,41 @@ class ProductsScreen extends StatelessWidget {
                   width: double.maxFinite,
                   margin: EdgeInsets.only(right: 5),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            side: BorderSide(
+                                width: 0.5, color: AppColors.primaryColor),
+                          ),
                           primary: AppColors.primaryColor,
                           onPrimary: AppColors.light,
                         ),
                         onPressed: () {
-                          Get.to(CompanyList());
+                          Get.to(CompanyList(company: CompanyData[1]));
                         },
                         child: Text(
                           'Fornecedores',
                           style: AppTextStyles.textButtonLight,
                         ),
-                      )
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              side: BorderSide(
+                                  width: 1, color: AppColors.primaryColor)),
+                          primary: AppColors.primaryColor,
+                          // onPrimary: AppColors.primaryColor,
+                        ),
+                        onPressed: () {
+                          // Get.to(CompanyList());
+                        },
+                        child: Text('Enviar interesse',
+                            style: AppTextStyles.textButtonPrimary),
+                      ),
                     ],
                   ),
                 ),

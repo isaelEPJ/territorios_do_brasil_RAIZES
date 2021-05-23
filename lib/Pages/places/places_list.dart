@@ -1,3 +1,5 @@
+import 'package:fl_territorios_do_brasil/Pages/company/company_list.dart';
+import 'package:fl_territorios_do_brasil/Pages/company/company_screen.dart';
 import 'package:fl_territorios_do_brasil/Pages/places/places_screen.dart';
 import 'package:fl_territorios_do_brasil/data/places_data.dart';
 import 'package:fl_territorios_do_brasil/model/places_model.dart';
@@ -121,8 +123,8 @@ class _PlacespageState extends State<Placespage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6)),
                         onTap: () {
-                          Get.to(PlacesScreen(
-                            place: place,
+                          Get.to(CompanyList(
+                            company: place.companyList[index],
                           ));
                         },
                         leading: Container(
