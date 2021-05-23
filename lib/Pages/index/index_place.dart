@@ -49,10 +49,14 @@ class IndexPlace extends StatelessWidget {
                   children: [
                     Text(
                       place.name,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                       style: AppTextStyles.titleCard,
                     ),
                     Text(
                       place.localidade.regiao,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                       style: AppTextStyles.bodyGrey,
                     ),
                   ],
