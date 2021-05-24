@@ -1,4 +1,4 @@
-<h2 align="center"> Bem vindo ao Raízes </h2>
+<h2 align="center"> Bem vindo(a) ao Raízes </h2>
 
 🌱 Buscamos resolver o problema da visualização/expansão dos produtos originários da cadeia da flora nativa, o que impacta na pouca valoração e conservação da biodiversidade, impactando na pouca comercialização e retorno financeiro.
 
