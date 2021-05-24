@@ -13,10 +13,12 @@ class SubAppBarIndex extends StatelessWidget {
           color: AppColors.primaryColor.withOpacity(0.95),
           borderRadius: BorderRadius.circular(6)),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Text(
-          'Aqui no Raizes você pode agendar sua visita e aprender muito sobre a produção e mercadorias do Nordeste! Navegue na aplicação e encontre o que deseja!',
+          'Bem-vindo ao Raízes, aqui você terá uma experiência que é a cara do Brasil! Nós unimos conhecimento, produtos e oportunidades de vivenciar toda a riqueza que os territórios do Norte-Nordeste podem oferecer aqui, na palma da sua mão.',
           style: AppTextStyles.presentText,
+          overflow: TextOverflow.ellipsis,
+          maxLines: 4,
           textAlign: TextAlign.center,
         ),
       ),

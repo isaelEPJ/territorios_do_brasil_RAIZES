@@ -158,16 +158,20 @@ class CompanyScreen extends StatelessWidget {
                                                   title: company.name,
                                                   // content: DialogDetailProduct(
                                                   //     product: product),
+                                                  content: Text(
+                                                      'Detalhes sobre a regiao com seu contexto historico e outras informaçoes muito legais!!'),
                                                   cancel: ElevatedButton(
-                                                    style: ElevatedButton.styleFrom(
-                                                        shape:
-                                                            RoundedRectangleBorder(
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            6)),
-                                                        primary: AppColors
-                                                            .primaryColor),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                            shape:
+                                                                RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          6),
+                                                            ),
+                                                            primary: AppColors
+                                                                .primaryColor),
                                                     onPressed: () {
                                                       Get.back();
                                                     },

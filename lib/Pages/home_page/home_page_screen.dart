@@ -41,9 +41,9 @@ class _HomePageState extends State<HomePage> {
         controller: widget.controller.pageViewController,
         children: <Widget>[
           IndexScreen(),
-          ProductsPage(),
           Placespage(),
-          EditAccount(),
+          ProductsPage(),
+          ProfileScreen(),
         ],
       ),
       bottomNavigationBar: AnimatedBuilder(
@@ -71,9 +71,9 @@ class _HomePageState extends State<HomePage> {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home_outlined), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.explore_rounded), label: 'Produtos'),
-                BottomNavigationBarItem(
                     icon: Icon(Icons.map_outlined), label: 'Locais'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.explore_rounded), label: 'Produtos'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.person_outline), label: 'Perfil'),
               ],

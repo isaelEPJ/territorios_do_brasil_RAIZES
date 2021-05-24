@@ -1,5 +1,4 @@
 import 'package:fl_territorios_do_brasil/Pages/places/places_screen.dart';
-import 'package:fl_territorios_do_brasil/Pages/products/products_screen.dart';
 import 'package:fl_territorios_do_brasil/model/places_model.dart';
 import 'package:fl_territorios_do_brasil/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';

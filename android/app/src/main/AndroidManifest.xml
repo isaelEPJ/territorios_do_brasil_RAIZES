@@ -8,7 +8,7 @@
    <uses-permission android:name="android.permission.INTERNET" />
 
    <application
-        android:label="fl_territorios_do_brasil"
+        android:label="Raízes"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
