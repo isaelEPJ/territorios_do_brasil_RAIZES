@@ -7,14 +7,13 @@
 ![Flutter](https://img.shields.io/badge/-Flutter-05122A?style=flat&logo=flutter&logoColor=33A6E8)&nbsp; 
 
 
- Soluçao elaborada para o hackathon **territórios do brasil**
+ Soluçao elaborada para o hackathon **territórios do brasil** #grupo58
 
 ##
 ![APK](https://img.shields.io/badge/-Android-05122A?style=flat&logo=android&logoColor=29d627)&nbsp;
-descompactar e executar em dispositivo android para isntalar.
+descompactar e executar em dispositivo android para instalar.
 **[raizes.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535334/raizes.zip)** ou
 **[raizes2.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535361/raizes2.zip)**
 
 
-    
-
+  
