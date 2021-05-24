@@ -12,8 +12,8 @@
 ##
 ![APK](https://img.shields.io/badge/-Android-05122A?style=flat&logo=android&logoColor=29d627)&nbsp;
 descompactar e executar em dispositivo android para isntalar.
-[raizes.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535334/raizes.zip) or
-[raizes2.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535361/raizes2.zip)
+**[raizes.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535334/raizes.zip)** ou
+**[raizes2.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535361/raizes2.zip)**
 
 
     
