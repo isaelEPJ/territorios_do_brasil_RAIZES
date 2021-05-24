@@ -1,16 +1,19 @@
-# fl_territorios_do_brasil
+<h2 align="center"> Bem vindo ao **Raízes** </h2>
 
-A new Flutter project.
+## 🌱 Buscamos resolver o problema da visualização/expansão dos produtos originários da cadeia da flora nativa, o que impacta na pouca valoração e conservação da biodiversidade, impactando na pouca comercialização e retorno financeiro.
 
-## Getting Started
+## 🛠 ferramentas utilizadas
+![Dart](https://img.shields.io/badge/-Dart-05122A?style=flat&logo=dart&logoColor=33A6E8)&nbsp;
+![Flutter](https://img.shields.io/badge/-Flutter-05122A?style=flat&logo=flutter&logoColor=33A6E8)&nbsp; 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Soluçao elaborada para o hackathon **territórios do brasil**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## ![APK](https://img.shields.io/badge/-Android-05122A?style=flat&logo=android&logoColor=33A6E8)&nbsp;
+descompactar e executar em dispositivo android para isntalar.
+[raizes.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535334/raizes.zip) or
+[raizes2.zip](https://github.com/isaelEPJ/territorios_do_brasil_RAIZES/files/6535361/raizes2.zip)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+    
+
