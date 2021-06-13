@@ -2,6 +2,10 @@
 
 🌱 Buscamos resolver o problema da visualização/expansão dos produtos originários da cadeia da flora nativa, o que impacta na pouca valoração e conservação da biodiversidade, impactando na pouca comercialização e retorno financeiro.
 
+
+<h2 align="center">  <img src = 'lib/assets/images/GifAppRaizes.gif' width='350'/> </h2>
+
+
 ## 🛠 ferramentas utilizadas
 ![Dart](https://img.shields.io/badge/-Dart-05122A?style=flat&logo=dart&logoColor=33A6E8)&nbsp;
 ![Flutter](https://img.shields.io/badge/-Flutter-05122A?style=flat&logo=flutter&logoColor=33A6E8)&nbsp; 
