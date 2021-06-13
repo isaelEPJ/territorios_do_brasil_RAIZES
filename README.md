@@ -4,33 +4,30 @@
 
 
 
-### Protótipo em desenvolvimento
+## Protótipo em desenvolvimento
 <h2 align="center">  <img src = 'lib/assets/images/GifAppRaizes.gif' width='350'/> </h2>
 
 
 
-### Fluxograma do Aplicativo Raízes
+## Fluxograma do Aplicativo Raízes
 <h2 align="center"> <img src = 'lib/assets/images/FluxoApp.jpeg' width='800'/> </h2>
 
 
-
-### 🛠 Ferramentas utilizadas 
-![Dart](https://img.shields.io/badge/-Dart-05122A?style=flat&logo=dart&logoColor=33A6E8)&nbsp;
-![Flutter](https://img.shields.io/badge/-Flutter-05122A?style=flat&logo=flutter&logoColor=33A6E8)&nbsp; 
+## Desenvolvimento
+O desenvolvimento do app foi realizado com a IDE Visual Studio, com o framework *Flutter* e com a linguagem *Dart*.
 
 
+## Realize o Download do Aplicativo Raízes abaixo
 
-### Clicando na imagem abaixo, é possível realizar o Download do Aplicativo Raízes
-[![](lib/assets/images/logo.png)](https://github.com/JulianaAlba/territorios_do_brasil_RAIZES/tree/master/Instalador_APK/app-x86_64-release.apk?raw=true)
-
+[![Download](https://img.shields.io/badge/-DOWNLOAD-black?style=flat-square&logo=DOWNLOAD&logoColor=white&link=https://github.com/JulianaAlba/territorios_do_brasil_RAIZES/blob/master/Instalador_APK/app-x86_64-release.apk?raw=true)](https://github.com/JulianaAlba/territorios_do_brasil_RAIZES/blob/master/Instalador_APK/app-x86_64-release.apk?raw=true) 
 
   
-### Time
+## Time
 <h2 align="center"> <img src = 'lib/assets/images/timeraizes.jpg' width='800'/> </h2>
 
 
 
-### Encerramento Hackathon Territórios do Brasil - Organização Panic Lobster 
+## Encerramento Hackathon Territórios do Brasil - Organização Panic Lobster 
 
 O nosso time obteve a 4º colocação com o projeto Raízes, reconhecido em live de encerramento.
 
@@ -38,7 +35,7 @@ O nosso time obteve a 4º colocação com o projeto Raízes, reconhecido em live
 
 
 
-### Clicando na imagem abaixo, é possível acessar a página do evento e visualizar a apresentação do nosso PITCH reduzido.
+## Acesse a página do evento e visualize a apresentação do nosso PITCH reduzido
 
-[![](lib/assets/images/maratona.PNG)](https://territoriosdobrasil.paniclobster.com/equipe/58)
+[![Pitch](https://img.shields.io/badge/-PITCH_RAÍZES-black?style=flat-square&logo=Pitch&logoColor=white&link=https://territoriosdobrasil.paniclobster.com/equipe/58)](https://territoriosdobrasil.paniclobster.com/equipe/58) 
 
